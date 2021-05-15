@@ -1,0 +1,278 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+# - intent: affirm
+#   examples: |
+#     - yes
+#     - y
+#     - indeed
+#     - of course
+#     - that sounds good
+#     - correct
+
+# - intent: deny
+#   examples: |
+#     - no
+#     - n
+#     - never
+#     - I don't think so
+#     - don't like that
+#     - no way
+#     - not really
+
+# - intent: mood_great
+#   examples: |
+#     - perfect
+#     - great
+#     - amazing
+#     - feeling like a king
+#     - wonderful
+#     - I am feeling very good
+#     - I am great
+#     - I am amazing
+#     - I am going to save the world
+#     - super stoked
+#     - extremely good
+#     - so so perfect
+#     - so good
+#     - so perfect
+
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+
+# - intent: bot_challenge
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?
+
+
+- intent: covid_facility_enquiry
+  examples: |
+    - [bed](facility) enquiry near [jabalpur](location)
+    - Need information about [bed](facility) facility.
+    - I want to know about [plasma](facility) donors.
+    - Provide info about [oxygen](facility) availability.
+    - Info about [ICU](facility)
+    - Let me know about [Ventilator](facility) near [indore](location)
+    - I need details about [remdesivir](facility) injections
+    - Tell me about [ventilators](facility)
+    - Provide details about  [food](facility) availability
+    - Info  about  [tiffin](facility) in [pune](location)
+    - I want [food](facility)
+    - I need [ICU](facility)
+    - I require [Oxy](facility)
+    - Assist me in providing leads and contacts of [ventilators] (facility)
+    - Help me searching contact of [plasma](facility) donars
+    - Please search [plasma](facility) donars for me
+
+- intent: covid_service_enquiry
+  examples: |
+    - What services do you offer?
+    - What resources you can offer?
+    - Tell me about resources.
+    - covid19 resources
+    - Contact information on what resources?
+    - Which contact you can provide?
+    - Can you tell me more about business?
+    - How?
+    - Could you tell me your resources?
+
+
+- intent: location_entry
+  examples: |
+    - [jabalpur](location)
+    - [indore](location)
+    - [nagpur](location)
+    - [bilaspur](location)
+    - [delhi](location)
+    - [mumbai](location)
+
+- intent: facility_entry
+  examples: |
+    - [bed](facility)
+    - [beds](facility)
+    - [O2](facility)
+    - [oxygen](facility)
+    - [oxy](facility)
+    - [ICU](facility)
+    - [ventilator](facility)
+    - [ventilators](facility)
+    - [plasma](facility)
+    - [remdisivir](facility)
+    - [food](facility)
+    - [tiffin](facility)
+    - [breakfast](facility)
+    - [lunch](facility)
+
+- intent: ans_yes
+  examples: |
+    - yes
+    - yeah
+    - yup
+    - yo
+    - yep
+    - yaa
+    - y
+
+- intent: ans_no
+  examples: |
+    - naah
+    - nope
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: thankyou
+  examples: |
+    - thank you 
+    - ok thanks
+    - okay thanks
+    - thanks
+    - okay
+    - thanks goodbye
+    - thank you goodbye
+    - okie
+    - cool
+    - nice
+    - of course
+    - that sounds good
+    - awesome
+
+- intent: out_of_scope
+  examples: |
+    - please help with my ice cream it's dripping
+    - no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
+    - i want a non dripping ice cream
+    - someone call the police i think the bot died
+    - show me a picture of a chicken
+    - neither
+    - I want french cuisine
+    - i am hungry
+    - restaurant
+    - can i be shown a gluten free restaurant
+    - i don't care!!!!
+    - i do not care how are you
+    - again?
+    - oh wait i gave you my work email address can i change it?
+    - hang on let me find it
+    - stop it, i do not care!!!
+    - how come?
+    - I changed my mind
+    - what?
+    - did i break you
+    - that link doesn't work!
+    - you already have that
+    - this is a really frustrating experience
+    - no stop
+    - give me food
+    - i want food
+    - Can I ask you questions first?
+    - is it a wasteland full of broken robot parts?
+    - can we keep chatting?
+    - talk to me
+    - who is your favourite robot?
+    - can you help me to build a bot
+    - a wood chuck can't chuck any kind of wood
+    - a wood chuck can't chuck wood
+    - are you wearing anything?
+    - can i arrange a taxi?
+    - can i book a taxi?
+    - can i order a pizza?
+    - give quiche a chance
+    - how much wood could a wood chuck chuck if a wood chuck would chuck wood?
+    - i am heavy weapons guy and this is my weapon
+    - i know kung-fu
+    - i need a taxi
+    - i want a pepperoni pizza
+    - i want to order a pizza
+    - i'd like a pizza please
+    - i'm all out of bubblegum
+    - i'm asking you to marry me
+    - it's an albany expression
+    - marry me
+    - now i have a machine gun ho-ho-ho!
+    - please marry me
+    - tell me what you're wearing?
+    - trial by stone!
+    - what are you wearing?
+    - will you marry me?
+    - you come to me on the day of my daughter's wedding
+    - you don't win friends with salad
+    - you're going to need a bigger boat
+    - fuck you
+    - oh my god
+    - where are you located?
+    - business hours? 
+
+- intent: smalltalk_human
+  examples: |
+    - am a talking with a bot?
+    - am i speaking to a bot?
+    - am i talking to a bot?
+    - am i talking to a human?
+    - am i talking to a person
+    - am i talking to a real person?
+    - am i talking to a robot?
+    - are you a human?
+    - are you a real person?
+    - are you real?
+    - can i contact a human being?
+    - i don't want to speak with a bot
+    - i don't want to talk
+    - i don't want to talk to a chatbot
+    - i don't want to talk with a chatbot
+    - i'd like to speak to a person
+    - is this a person?
+    - is this a real person or a bot?
+    - who am i talking to?
+    - you real?

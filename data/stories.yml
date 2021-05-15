@@ -1,0 +1,80 @@
+version: "2.0"
+
+stories:
+- story: covid facility path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: covid_facility_enquiry
+  - action: facility_form
+  - active_loop: facility_form
+  - active_loop: null
+  - action: action_restart
+  
+- story: covid facility path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: covid_service_enquiry
+  - action: utter_covid_service_enquiry
+  - intent: covid_facility_enquiry
+  - action: facility_form
+  - active_loop: facility_form
+  - active_loop: null
+  - action: action_restart
+
+- story: any query path
+  steps:
+  - intent: thankyou
+  - action: utter_ask_anyquery
+  - intent: ans_yes
+  - action: facility_form
+  - active_loop: facility_form
+  - active_loop: null
+  - action: action_restart
+
+- story: no query path
+  steps:
+  - intent: thankyou
+  - action: utter_ask_anyquery
+  - intent: ans_no
+  - action: utter_goodbye
+  - action: action_restart
+
+- story: smalltalk_human_story
+  steps:
+  - intent: smalltalk_human
+  - action: utter_smalltalk_human
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+# - story: corona tracker path
+#   steps:
+#   - intent: corona_state
+#   - action: action_corona_tracker
+  

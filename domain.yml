@@ -1,0 +1,105 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - thankyou
+  - ans_no
+  # - affirm
+  # - deny
+  # - mood_great
+  # - mood_unhappy
+  # - bot_challenge 
+  - ans_yes
+  - covid_facility_enquiry
+  - location_entry
+  - facility_entry
+  - covid_service_enquiry
+  - out_of_scope
+  - smalltalk_human
+
+entities:
+  - location
+  - facility
+
+slots:
+  facility:
+    type: text
+  location:
+    type: text
+  
+
+actions:
+  - action_corona_tracker
+  - action_restart
+
+  
+forms:
+  - facility_form
+    
+
+responses:
+  utter_greet:
+  - text: "Hi, I am Co-Avail assistant!\n\n
+           I can assist you on contact information of COVID-19 resources."
+
+  utter_covid_service_enquiry:
+  - text: "I can provide you contacts and leads for the following COVID-19 resources:\n
+           - Bed\n
+           - Oxygen\n
+           - ICU\n
+           - Ventilator\n
+           - Plasma donars\n
+           - Remdesivir\n
+           - Food/Tiffin\n\n
+           How may I help you?"
+
+  utter_ask_location:
+  - text: "Your city please?"
+
+  utter_ask_facility:
+  - text: "Which COVID-19 resource do you want?"
+  
+  utter_ask_anyquery:
+  - text: "Do you have any other query?"
+
+  utter_smalltalk_human:
+  - text: Yes, I am a Co-Avail assistant here to help you find answers.
+  - text: Yes I am a Robot to assist you in COVID-19 related questions. 
+    # buttons:
+    # - title: "Yes"
+    #   payload: "/ans_yes"
+    # - title: "No"
+    #   payload: "/ans_no"
+
+  utter_slots_values:
+  - text: "Thank you for your response. \n
+           Resource: {facility}\n
+           Location: {location}\n"
+
+  utter_submit:
+  - text: "\n Please click on the link below for leads and contacts:\n"
+  
+  utter_out_of_scope:
+  - text: "I wish I could answer your question, Please ask some other question please."
+  - text: "Sorry, I can't handle that request, can you please ask questions related to COVID-19?"
+
+  # utter_cheer_up:
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  # utter_did_that_help:
+  # - text: "Did that help you?"
+
+  # utter_happy:
+  # - text: "Great, carry on!"
+  
+  utter_goodbye:
+  - text: "Stay Safe! Stay Home! Bye!"
+
+  # utter_iamabot:
+  # - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
