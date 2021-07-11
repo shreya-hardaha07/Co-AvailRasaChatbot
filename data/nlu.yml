@@ -10,6 +10,8 @@ nlu:
     - good morning
     - good evening
     - moin
+    - good afternoon
+    - what's up
     - hey there
     - let's go
     - hey dude
@@ -19,7 +21,6 @@ nlu:
 
 - intent: goodbye
   examples: |
-    - good afternoon
     - cu
     - good by
     - cee you later
@@ -30,66 +31,12 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - by
+    - bye then
+    - shut up
+    - no help required further
 
-# - intent: affirm
-#   examples: |
-#     - yes
-#     - y
-#     - indeed
-#     - of course
-#     - that sounds good
-#     - correct
 
-# - intent: deny
-#   examples: |
-#     - no
-#     - n
-#     - never
-#     - I don't think so
-#     - don't like that
-#     - no way
-#     - not really
-
-# - intent: mood_great
-#   examples: |
-#     - perfect
-#     - great
-#     - amazing
-#     - feeling like a king
-#     - wonderful
-#     - I am feeling very good
-#     - I am great
-#     - I am amazing
-#     - I am going to save the world
-#     - super stoked
-#     - extremely good
-#     - so so perfect
-#     - so good
-#     - so perfect
-
-# - intent: mood_unhappy
-#   examples: |
-#     - my day was horrible
-#     - I am sad
-#     - I don't feel very well
-#     - I am disappointed
-#     - super sad
-#     - I'm so sad
-#     - sad
-#     - very sad
-#     - unhappy
-#     - not good
-#     - not very good
-#     - extremly sad
-#     - so saad
-#     - so sad
-
-# - intent: bot_challenge
-#   examples: |
-#     - are you a bot?
-#     - are you a human?
-#     - am I talking to a bot?
-#     - am I talking to a human?
 
 
 - intent: covid_facility_enquiry
@@ -105,11 +52,13 @@ nlu:
     - Provide details about  [food](facility) availability
     - Info  about  [tiffin](facility) in [pune](location)
     - I want [food](facility)
+    - I want [plasma](facility)
     - I need [ICU](facility)
     - I require [Oxy](facility)
-    - Assist me in providing leads and contacts of [ventilators] (facility)
+    - Assist me in providing leads and contacts of [ventilators](facility)
     - Help me searching contact of [plasma](facility) donars
     - Please search [plasma](facility) donars for me
+    - Can you help me with [oxygen](facility)?
 
 - intent: covid_service_enquiry
   examples: |
@@ -119,9 +68,14 @@ nlu:
     - covid19 resources
     - Contact information on what resources?
     - Which contact you can provide?
-    - Can you tell me more about business?
+    - Can you tell me more about your business?
     - How?
     - Could you tell me your resources?
+    - help!!
+    - I need help?
+    - What service do you offer?
+    - How can you help me.
+
 
 
 - intent: location_entry
@@ -132,6 +86,9 @@ nlu:
     - [bilaspur](location)
     - [delhi](location)
     - [mumbai](location)
+    - [Ahemdabad](location)
+    - [Chandigarh](location)
+    - [Gandhinagar](location)
 
 - intent: facility_entry
   examples: |
@@ -149,6 +106,28 @@ nlu:
     - [tiffin](facility)
     - [breakfast](facility)
     - [lunch](facility)
+    
+- intent: vaccine_enquiry
+  examples: |
+    - Need [vaccine](facility) slot
+    - I want to book [vaccine](facility) slot
+    - [Vaccine](facility) slot availability
+    - [vaccine](facility)
+    - [vaccination](facility)
+    - [vaccines](facility)
+    - [covishield](facility)
+    - [covaxin](facility)
+    - [sputnik](facility)
+
+
+
+- intent: pincode_entry
+  examples: |
+    - [440022](pincode)
+    - [110010](pincode)
+    - [482001](pincode)
+    - [482003](pincode)
+    - [400011](pincode)
 
 - intent: ans_yes
   examples: |
@@ -187,6 +166,16 @@ nlu:
     - of course
     - that sounds good
     - awesome
+    - thanks for your help
+    - Thanku
+    - You were useful
+    - great work
+    - got the information
+    - got the info
+    - it did help
+    - you were a grat help
+
+
 
 - intent: out_of_scope
   examples: |
@@ -252,7 +241,22 @@ nlu:
     - fuck you
     - oh my god
     - where are you located?
-    - business hours? 
+    - business hours?
+    - you are stupid
+    - you are a bitch
+    - looser
+    - not at all helpful
+    - waste of time
+    - waste of energy
+    - you suck
+    - dumb shit
+    - what is your name
+    - what is the time
+    - I love you
+    - I want money
+    - Go to hell
+    - I hate you
+
 
 - intent: smalltalk_human
   examples: |
@@ -276,3 +280,9 @@ nlu:
     - is this a real person or a bot?
     - who am i talking to?
     - you real?
+    - go to hell
+
+
+
+
+  

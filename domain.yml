@@ -5,6 +5,9 @@ intents:
   - goodbye
   - thankyou
   - ans_no
+  - vaccine_enquiry
+  # - age_entry
+  - pincode_entry
   # - affirm
   # - deny
   # - mood_great
@@ -21,44 +24,72 @@ intents:
 entities:
   - location
   - facility
+  - pincode
+  # - age
 
 slots:
   facility:
     type: text
   location:
     type: text
+  # age:
+  #   type: float
+  pincode:
+    type: float
   
 
 actions:
-  - action_corona_tracker
+  # - action_corona_tracker
   - action_restart
 
   
 forms:
   - facility_form
+  - vaccine_form
     
 
 responses:
   utter_greet:
-  - text: "Hi, I am Co-Avail assistant!\n\n
-           I can assist you on contact information of COVID-19 resources."
-
-  utter_covid_service_enquiry:
-  - text: "I can provide you contacts and leads for the following COVID-19 resources:\n
+  - text:  "Hello, I am Co-Avail assistant!\n\n
+           I can assist you with information of following COVID-19 resources:\n
            - Bed\n
            - Oxygen\n
            - ICU\n
            - Ventilator\n
            - Plasma donars\n
            - Remdesivir\n
-           - Food/Tiffin\n\n
-           How may I help you?"
+           - Food/Tiffin\n
+           - Vaccine Slot Availability.\n\n
+            What is your requirement?"
 
+
+
+
+  utter_covid_service_enquiry:
+  - text: "I can assist you with information of following COVID-19 resources:\n
+           - Bed\n
+           - Oxygen\n
+           - ICU\n
+           - Ventilator\n
+           - Plasma donars\n
+           - Remdesivir\n
+           - Food/Tiffin\n
+           - Vaccine Slot Availability.\n\n
+           Please pick a suitable Covid-19 resource"
+           
   utter_ask_location:
   - text: "Your city please?"
+  
 
-  utter_ask_facility:
-  - text: "Which COVID-19 resource do you want?"
+ 
+  
+  
+
+  utter_ask_pincode:
+  - text: "Your pincode please?"
+
+  # utter_ask_age:
+  # - text: "Your age please?"
   
   utter_ask_anyquery:
   - text: "Do you have any other query?"
@@ -76,6 +107,7 @@ responses:
   - text: "Thank you for your response. \n
            Resource: {facility}\n
            Location: {location}\n"
+  
 
   utter_submit:
   - text: "\n Please click on the link below for leads and contacts:\n"
@@ -83,6 +115,8 @@ responses:
   utter_out_of_scope:
   - text: "I wish I could answer your question, Please ask some other question please."
   - text: "Sorry, I can't handle that request, can you please ask questions related to COVID-19?"
+
+   
 
   # utter_cheer_up:
   # - text: "Here is something to cheer you up:"
