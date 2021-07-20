@@ -16,7 +16,7 @@ Terminal / rasa cmd 2: rasa run actions
 Terminal / cmd 3: ngrok http 5005 
 
 Telegram integration
-@Covid19_resource_provider_bot
+@CoAvail_bot
 Terminal / rasa cmd 1: rasa run -m models --enable-api
 Terminal / rasa cmd 2: rasa run actions
 Terminal / cmd 3: ngrok http 5005
