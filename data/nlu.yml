@@ -54,44 +54,9 @@ nlu:
     - I want [food](facility)
     - I want [plasma](facility)
     - I need [ICU](facility)
+    - I need [ventilator](facility)
+    - I want [bed](facility)
     - I require [Oxy](facility)
-    - Assist me in providing leads and contacts of [ventilators](facility)
-    - Help me searching contact of [plasma](facility) donars
-    - Please search [plasma](facility) donars for me
-    - Can you help me with [oxygen](facility)?
-
-- intent: covid_service_enquiry
-  examples: |
-    - What services do you offer?
-    - What resources you can offer?
-    - Tell me about resources.
-    - covid19 resources
-    - Contact information on what resources?
-    - Which contact you can provide?
-    - Can you tell me more about your business?
-    - How?
-    - Could you tell me your resources?
-    - help!!
-    - I need help?
-    - What service do you offer?
-    - How can you help me.
-
-
-
-- intent: location_entry
-  examples: |
-    - [jabalpur](location)
-    - [indore](location)
-    - [nagpur](location)
-    - [bilaspur](location)
-    - [delhi](location)
-    - [mumbai](location)
-    - [Ahemdabad](location)
-    - [Chandigarh](location)
-    - [Gandhinagar](location)
-
-- intent: facility_entry
-  examples: |
     - [bed](facility)
     - [beds](facility)
     - [O2](facility)
@@ -106,6 +71,46 @@ nlu:
     - [tiffin](facility)
     - [breakfast](facility)
     - [lunch](facility)
+    - Assist me in providing leads and contacts of [ventilators](facility)
+    - Help me searching contact of [plasma](facility) donars
+    - Please search [plasma](facility) donars for me
+    - Can you help me with [oxygen](facility)?
+
+
+
+
+
+- intent: location_entry
+  examples: |
+    - [jabalpur](location)
+    - [indore](location)
+    - [nagpur](location)
+    - [bilaspur](location)
+    - [delhi](location)
+    - [mumbai](location)
+    - [Ahemdabad](location)
+    - [Chandigarh](location)
+    - [Gandhinagar](location)
+    - [Kolkata](location)
+    - [Goa](location)
+    - [Hyderabad](location)
+
+# - intent: facility_entry
+#   examples: |
+#     - [bed](facility)
+#     - [beds](facility)
+#     - [O2](facility)
+#     - [oxygen](facility)
+#     - [oxy](facility)
+#     - [ICU](facility)
+#     - [ventilator](facility)
+#     - [ventilators](facility)
+#     - [plasma](facility)
+#     - [remdisivir](facility)
+#     - [food](facility)
+#     - [tiffin](facility)
+#     - [breakfast](facility)
+#     - [lunch](facility)
     
 - intent: vaccine_enquiry
   examples: |
@@ -128,6 +133,9 @@ nlu:
     - [482001](pincode)
     - [482003](pincode)
     - [400011](pincode)
+    - [380004](pincode)
+    - [700012](pincode)
+    - [560004](pincode)
 
 - intent: ans_yes
   examples: |

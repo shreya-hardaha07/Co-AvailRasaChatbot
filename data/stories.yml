@@ -10,18 +10,6 @@ stories:
   - active_loop: facility_form
   - active_loop: null
   - action: action_restart
-  
-- story: covid facility path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: covid_service_enquiry
-  - action: utter_covid_service_enquiry
-  - intent: covid_facility_enquiry
-  - action: facility_form
-  - active_loop: facility_form
-  - active_loop: null
-  - action: action_restart
 
 
 

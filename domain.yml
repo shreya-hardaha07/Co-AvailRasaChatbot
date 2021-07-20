@@ -16,8 +16,7 @@ intents:
   - ans_yes
   - covid_facility_enquiry
   - location_entry
-  - facility_entry
-  - covid_service_enquiry
+  # - facility_entry
   - out_of_scope
   - smalltalk_human
 
@@ -39,7 +38,6 @@ slots:
   
 
 actions:
-  # - action_corona_tracker
   - action_restart
 
   
@@ -75,15 +73,10 @@ responses:
            - Remdesivir\n
            - Food/Tiffin\n
            - Vaccine Slot Availability.\n\n
-           Please pick a suitable Covid-19 resource"
+           Please pick suitable COVID19 resource."
            
   utter_ask_location:
   - text: "Your city please?"
-  
-
- 
-  
-  
 
   utter_ask_pincode:
   - text: "Your pincode please?"
@@ -97,11 +90,7 @@ responses:
   utter_smalltalk_human:
   - text: Yes, I am a Co-Avail assistant here to help you find answers.
   - text: Yes I am a Robot to assist you in COVID-19 related questions. 
-    # buttons:
-    # - title: "Yes"
-    #   payload: "/ans_yes"
-    # - title: "No"
-    #   payload: "/ans_no"
+    
 
   utter_slots_values:
   - text: "Thank you for your response. \n
