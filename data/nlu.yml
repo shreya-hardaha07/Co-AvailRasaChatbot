@@ -36,8 +36,18 @@ nlu:
     - shut up
     - no help required further
 
-
-
+- intent: justdial_services
+  examples: |
+    - [ambulance](justdial)
+    - [tiffin](justdial)
+    - [Tiffin](justdial) services nearby
+    - I want [food](justdial)
+    - Provide details about  [food](justdial) availability
+    - Info about [tiffin](justdial) in [pune](location)
+    - [food](justdial)
+    - [breakfast](justdial)
+    - [lunch](justdial)
+    - [dinner](justdial)
 
 - intent: covid_facility_enquiry
   examples: |
@@ -49,9 +59,6 @@ nlu:
     - Let me know about [Ventilator](facility) near [indore](location)
     - I need details about [remdesivir](facility) injections
     - Tell me about [ventilators](facility)
-    - Provide details about  [food](facility) availability
-    - Info  about  [tiffin](facility) in [pune](location)
-    - I want [food](facility)
     - I want [plasma](facility)
     - I need [ICU](facility)
     - I need [ventilator](facility)
@@ -67,10 +74,6 @@ nlu:
     - [ventilators](facility)
     - [plasma](facility)
     - [remdisivir](facility)
-    - [food](facility)
-    - [tiffin](facility)
-    - [breakfast](facility)
-    - [lunch](facility)
     - Assist me in providing leads and contacts of [ventilators](facility)
     - Help me searching contact of [plasma](facility) donars
     - Please search [plasma](facility) donars for me
@@ -94,6 +97,16 @@ nlu:
     - [Kolkata](location)
     - [Goa](location)
     - [Hyderabad](location)
+    - [Bhopal](location)
+    - [Faridabad](location)
+    - [Lalitpur](location)
+    - [Nainital](location)
+    - [Ooty](location)
+    - [Pune](location)
+    - [raipur](location)
+    - [sagar](location)
+    - [Tirupati](location)
+    
 
 # - intent: facility_entry
 #   examples: |

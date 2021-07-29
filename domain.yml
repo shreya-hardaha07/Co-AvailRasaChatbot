@@ -8,22 +8,19 @@ intents:
   - vaccine_enquiry
   # - age_entry
   - pincode_entry
-  # - affirm
-  # - deny
-  # - mood_great
-  # - mood_unhappy
-  # - bot_challenge 
   - ans_yes
   - covid_facility_enquiry
   - location_entry
   # - facility_entry
   - out_of_scope
   - smalltalk_human
+  - justdial_services
 
 entities:
   - location
   - facility
   - pincode
+  - justdial
   # - age
 
 slots:
@@ -35,6 +32,8 @@ slots:
   #   type: float
   pincode:
     type: float
+  justdial:
+    type: text
   
 
 actions:
@@ -44,6 +43,7 @@ actions:
 forms:
   - facility_form
   - vaccine_form
+  - justdial_services_form
     
 
 responses:
@@ -56,7 +56,8 @@ responses:
            - Ventilator\n
            - Plasma donars\n
            - Remdesivir\n
-           - Food/Tiffin\n
+           - Tiffin services\n
+           - Ambulance services\n
            - Vaccine Slot Availability.\n\n
             What is your requirement?"
 
@@ -71,7 +72,8 @@ responses:
            - Ventilator\n
            - Plasma donars\n
            - Remdesivir\n
-           - Food/Tiffin\n
+           - Tiffin services\n
+           - Ambulance services\n
            - Vaccine Slot Availability.\n\n
            Please pick suitable COVID19 resource."
            
@@ -107,21 +109,12 @@ responses:
 
    
 
-  # utter_cheer_up:
-  # - text: "Here is something to cheer you up:"
-  #   image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  # utter_did_that_help:
-  # - text: "Did that help you?"
-
-  # utter_happy:
-  # - text: "Great, carry on!"
+ 
   
   utter_goodbye:
   - text: "Stay Safe! Stay Home! Bye!"
 
-  # utter_iamabot:
-  # - text: "I am a bot, powered by Rasa."
+ 
 
 session_config:
   session_expiration_time: 60

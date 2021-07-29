@@ -37,6 +37,27 @@ stories:
   - intent: smalltalk_human
   - action: utter_smalltalk_human
 
+- story: justdial_services_story
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: justdial_services
+  - action: justdial_services_form
+  - active_loop: justdial_services_form
+  - active_loop: null
+  - action: action_restart
+
+- story: any query path justdial
+  steps:
+  - intent: thankyou
+  - action: utter_ask_anyquery
+  - intent: ans_yes
+  - action: utter_covid_service_enquiry
+  - intent: justdial_services
+  - action: justdial_services_form
+  - active_loop: justdial_services_form
+  - active_loop: null
+  - action: action_restart
 
 
 - story: covid vaccine path
@@ -62,32 +83,3 @@ stories:
   - action: action_restart
 
 
-# - story: happy path
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: mood_great
-#   - action: utter_happy
-
-# - story: sad path 1
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: mood_unhappy
-#   - action: utter_cheer_up
-#   - action: utter_did_that_help
-#   - intent: affirm
-#   - action: utter_happy
-
-# - story: sad path 2
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: mood_unhappy
-#   - action: utter_cheer_up
-#   - action: utter_did_that_help
-#   - intent: deny
-#   - action: utter_goodbye
-
-
-  
